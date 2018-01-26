@@ -40,6 +40,16 @@ class SearchViewModelTests: QuickSpec {
                     expect(params?[0] as? Double).to(equal(12))
                     expect(params?[1] as? Double).to(equal(75))
                 }
+                
+                it("calls the fail block if the values couldn't be converted to numbers") {
+                    var message = ""
+                    
+                    subject.getPassOverTimesFor(latitude: "1F2", longitude: "75BB", failBlock: { error in
+                        message = error
+                    })
+                    
+                    expect(message).toEventually(equal("You need to enter numbers for the latitude and longitude."))
+                }
             }
         }
     }
