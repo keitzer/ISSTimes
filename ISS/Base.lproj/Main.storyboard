@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iss" translatesAutoresizingMaskIntoConstraints="NO" id="qoq-Bh-Doo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iss" translatesAutoresizingMaskIntoConstraints="NO" id="qoq-Bh-Doo">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="LONGITUDE" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Pvv-uO-YTX">
@@ -36,7 +36,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISS Location Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xn7-hW-gff">
-                                <rect key="frame" x="50" y="54" width="274" height="57"/>
+                                <rect key="frame" x="10" y="54" width="355" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="R39-Pm-CrG"/>
                                 </constraints>
@@ -45,7 +45,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvS-Oz-rB7">
-                                <rect key="frame" x="43" y="155" width="289" height="65"/>
+                                <rect key="frame" x="43.5" y="155" width="289" height="65"/>
                                 <string key="text">Enter Lat/Long below
 and press Search!</string>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
@@ -53,7 +53,7 @@ and press Search!</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9Y-gt-lk9">
-                                <rect key="frame" x="111" y="452" width="152" height="60"/>
+                                <rect key="frame" x="111" y="527" width="152" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="DIV-3E-ZX8"/>
                                     <constraint firstAttribute="width" constant="152" id="pl9-wC-QDU"/>
@@ -80,7 +80,7 @@ and press Search!</string>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEH-0e-kZT">
-                                <rect key="frame" x="96" y="390" width="183" height="60"/>
+                                <rect key="frame" x="96" y="465" width="183" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="ToW-Zg-dUe"/>
                                     <constraint firstAttribute="width" constant="183" id="k8V-Ph-loG"/>
@@ -108,12 +108,12 @@ and press Search!</string>
                             <constraint firstItem="pvS-Oz-rB7" firstAttribute="top" secondItem="Xn7-hW-gff" secondAttribute="bottom" constant="44" id="QuU-yh-MUF"/>
                             <constraint firstItem="I9Y-gt-lk9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TxH-Ja-bPa"/>
                             <constraint firstItem="pvS-Oz-rB7" firstAttribute="centerX" secondItem="Xn7-hW-gff" secondAttribute="centerX" id="UTL-zB-3Wc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xn7-hW-gff" secondAttribute="trailing" constant="51" id="ZL1-Cl-5VF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xn7-hW-gff" secondAttribute="trailing" constant="10" id="ZL1-Cl-5VF"/>
                             <constraint firstItem="jEH-0e-kZT" firstAttribute="centerX" secondItem="I9Y-gt-lk9" secondAttribute="centerX" id="bGG-fX-O3g"/>
                             <constraint firstItem="0eA-Eg-Kzc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cJw-oy-KcD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="I9Y-gt-lk9" secondAttribute="bottom" constant="155" id="hFJ-c4-XId"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="I9Y-gt-lk9" secondAttribute="bottom" constant="80" id="hFJ-c4-XId"/>
                             <constraint firstItem="Pvv-uO-YTX" firstAttribute="centerX" secondItem="0eA-Eg-Kzc" secondAttribute="centerX" id="l71-sX-j0L"/>
-                            <constraint firstItem="Xn7-hW-gff" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="lUQ-L3-ntt"/>
+                            <constraint firstItem="Xn7-hW-gff" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="lUQ-L3-ntt"/>
                             <constraint firstItem="I9Y-gt-lk9" firstAttribute="top" secondItem="jEH-0e-kZT" secondAttribute="bottom" constant="2" id="whI-fc-iPo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
