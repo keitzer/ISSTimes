@@ -59,7 +59,17 @@ class PassOverRequestTests: QuickSpec {
             }
             
             describe("init from dictionary") {
-                
+                it("can be initialized successfully from dictionary") {
+                    let subject = PassOverRequest(fromDict: [
+                        "altitude": 100
+                        "datetime": 500
+                        "latitude": 10.8
+                        "longitude": 12.1
+                        "passes": 16
+                    ])
+                    
+                    expect(subject).notTo(beNil())
+                }
             }
         }
     }
