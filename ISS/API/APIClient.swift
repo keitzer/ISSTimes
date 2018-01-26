@@ -34,7 +34,7 @@ class GlobalAPIClient: APIClient {
                     successBlock(response)
                 }
                 else {
-                    failBlock("Menu failed to load. Try again.")
+                    failBlock("Search failed to load. Try again.")
                 }
         }
     }
