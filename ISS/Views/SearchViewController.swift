@@ -19,6 +19,20 @@ class SearchViewController: UIViewController {
     }
     
     @IBAction func searchPressed() {
+        if let latText = latitudeTextField.text,
+            let longText = longitudeTextField.text,
+            let latitude = Double(latText),
+            let longitude = Double(longText) {
+            
+            apiClient.getPassOverTimesFor(latitude: latitude, longitude: longitude, successBlock: handleSearchSuccess, failBlock: handleSearchFail)
+        }
+    }
+    
+    func handleSearchSuccess(response: PassOverResponse) {
+        
+    }
+    
+    func handleSearchFail(message: String) {
         
     }
 }
