@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct PassOverResponse: Equatable {
+class PassOverResponse: Equatable {
     /// Returns a Boolean value indicating whether two values are equal.
     ///
     /// Equality is the inverse of inequality. For any values `a` and `b`,
@@ -24,4 +24,9 @@ struct PassOverResponse: Equatable {
     
     let request: PassOverRequest
     let passes: [PassOver]
+    
+    init(request: PassOverRequest, passes: [PassOver]) {
+        self.request = request
+        self.passes = passes
+    }
 }
