@@ -60,7 +60,7 @@ class PassOverRequestTests: QuickSpec {
             
             describe("init from dictionary") {
                 it("can be initialized successfully from dictionary") {
-                    let data = [
+                    let data: [String: Double] = [
                         "altitude": 100,
                         "datetime": 500,
                         "latitude": 10.8,
@@ -79,7 +79,7 @@ class PassOverRequestTests: QuickSpec {
                 }
                 
                 it("can be initialized successfully from dictionary when lat long are whole numbers") {
-                    let data = [
+                    let data: [String: Double] = [
                         "altitude": 100,
                         "datetime": 500,
                         "latitude": 10,

@@ -25,13 +25,13 @@ class PassOverRequest: Equatable {
             && lhs.passes == rhs.passes
     }
     
-    let altitude: Int
-    let datetime: Int
+    let altitude: Double
+    let datetime: Double
     let latitude: Double
     let longitude: Double
-    let passes: Int
+    let passes: Double
     
-    init(altitude: Int, datetime: Int, latitude: Double, longitude: Double, passes: Int) {
+    init(altitude: Double, datetime: Double, latitude: Double, longitude: Double, passes: Double) {
         self.altitude = altitude
         self.datetime = datetime
         self.latitude = latitude
@@ -40,30 +40,18 @@ class PassOverRequest: Equatable {
     }
     
     init?(fromDict dictionary: [String: Any]) {
-        guard let altitude = dictionary["altitude"] as? Int,
-            let datetime = dictionary["datetime"] as? Int,
-            let passes = dictionary["passes"] as? Int else {
+        guard let altitude = dictionary["altitude"] as? Double,
+            let datetime = dictionary["datetime"] as? Double,
+            let passes = dictionary["passes"] as? Double,
+            let latitude = dictionary["latitude"] as? Double,
+            let longitude = dictionary["longitude"] as? Double else {
                 return nil
-        }
-        
-        if let latitude = dictionary["latitude"] as? Double {
-            self.latitude = latitude
-        } else if let latitude = dictionary["latitude"] as? Int {
-            self.latitude = Double(latitude)
-        } else {
-            return nil
-        }
-        
-        if let longitude = dictionary["longitude"] as? Double {
-            self.longitude = longitude
-        } else if let longitude = dictionary["longitude"] as? Int {
-            self.longitude = Double(longitude)
-        } else {
-            return nil
         }
         
         self.altitude = altitude
         self.datetime = datetime
+        self.latitude = latitude
+        self.longitude = longitude
         self.passes = passes
     }
 }

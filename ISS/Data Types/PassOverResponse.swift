@@ -29,4 +29,22 @@ class PassOverResponse: Equatable {
         self.request = request
         self.passes = passes
     }
+    
+    init?(fromDict dictionary: [String: Any]) {
+        guard let requestData = dictionary["request"] as? [String: Any],
+            let passesData = dictionary["response"] as? [[String: Any]],
+            let request = PassOverRequest(fromDict: requestData) else {
+                return nil
+        }
+        var passes = [PassOver]()
+        
+        for (dict) in passesData {
+            if let pass = PassOver(fromDict: dict) {
+                passes.append(pass)
+            }
+        }
+        
+        self.request = request
+        self.passes = passes
+    }
 }

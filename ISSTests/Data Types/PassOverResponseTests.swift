@@ -78,7 +78,17 @@ class PassOverResponseTests: QuickSpec {
                     let subject = PassOverResponse(fromDict: data)
                     
                     expect(subject).notTo(beNil())
+                    expect(subject?.request.altitude).to(equal(100))
+                    expect(subject?.request.datetime).to(equal(1516925875))
+                    expect(subject?.request.latitude).to(equal(50.2))
+                    expect(subject?.request.longitude).to(equal(100.1))
+                    expect(subject?.request.passes).to(equal(5))
                     
+                    expect(subject?.passes.count).to(equal(2))
+                    expect(subject?.passes[0].duration).to(equal(555))
+                    expect(subject?.passes[0].risetime).to(equal(1516966899))
+                    expect(subject?.passes[1].duration).to(equal(637))
+                    expect(subject?.passes[1].risetime).to(equal(1516972617))
                 }
                 
                 // For the sake of time and my sanity I will not include all permutations and "what if this thing couldn't be interpreted" scenarios. If you want to see an example of this, look at PassOverTests.swift

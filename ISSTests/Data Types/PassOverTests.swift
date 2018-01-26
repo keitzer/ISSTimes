@@ -44,7 +44,7 @@ class PassOverTests: QuickSpec {
                         "risetime" : 1000,
                     ]
                     
-                    let item = PassOver(fromDict: )
+                    let item = PassOver(fromDict: data)
                     
                     expect(item).notTo(beNil())
                     expect(item?.duration).to(equal(50))
@@ -72,7 +72,7 @@ class PassOverTests: QuickSpec {
                 }
                 
                 it("returns nil when duration cannot be cast to an int directly") {
-                    let data = [
+                    let data: [String: Any] = [
                         "duration" : "500",
                         "risetime" : 1000,
                     ]
@@ -83,7 +83,7 @@ class PassOverTests: QuickSpec {
                 }
                 
                 it("returns nil when risetime cannot be cast to an int directly") {
-                    let data = [
+                    let data: [String: Any] = [
                         "duration" : 50,
                         "risetime" : "1000",
                     ]
