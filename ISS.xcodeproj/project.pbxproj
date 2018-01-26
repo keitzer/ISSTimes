@@ -14,7 +14,8 @@
 		FE6CB3F9201AA798003A6790 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE6CB3F7201AA798003A6790 /* Main.storyboard */; };
 		FE6CB3FB201AA798003A6790 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE6CB3FA201AA798003A6790 /* Assets.xcassets */; };
 		FE6CB3FE201AA798003A6790 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE6CB3FC201AA798003A6790 /* LaunchScreen.storyboard */; };
-		FE6CB409201AA798003A6790 /* ISSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB408201AA798003A6790 /* ISSTests.swift */; };
+		FE6CB416201AA946003A6790 /* Mockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB414201AA946003A6790 /* Mockable.swift */; };
+		FE6CB417201AA946003A6790 /* MockMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB415201AA946003A6790 /* MockMatchers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +43,9 @@
 		FE6CB3FD201AA798003A6790 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE6CB3FF201AA798003A6790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE6CB404201AA798003A6790 /* ISSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ISSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE6CB408201AA798003A6790 /* ISSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSTests.swift; sourceTree = "<group>"; };
 		FE6CB40A201AA798003A6790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE6CB414201AA946003A6790 /* Mockable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mockable.swift; sourceTree = "<group>"; };
+		FE6CB415201AA946003A6790 /* MockMatchers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMatchers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,10 +124,19 @@
 		FE6CB407201AA798003A6790 /* ISSTests */ = {
 			isa = PBXGroup;
 			children = (
-				FE6CB408201AA798003A6790 /* ISSTests.swift */,
+				FE6CB413201AA946003A6790 /* Test Utils */,
 				FE6CB40A201AA798003A6790 /* Info.plist */,
 			);
 			path = ISSTests;
+			sourceTree = "<group>";
+		};
+		FE6CB413201AA946003A6790 /* Test Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FE6CB414201AA946003A6790 /* Mockable.swift */,
+				FE6CB415201AA946003A6790 /* MockMatchers.swift */,
+			);
+			path = "Test Utils";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,7 +366,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE6CB409201AA798003A6790 /* ISSTests.swift in Sources */,
+				FE6CB417201AA946003A6790 /* MockMatchers.swift in Sources */,
+				FE6CB416201AA946003A6790 /* Mockable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
