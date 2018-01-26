@@ -135,11 +135,11 @@
 		FE6CB3F2201AA798003A6790 /* ISS */ = {
 			isa = PBXGroup;
 			children = (
+				FE6CB43B201AC4F5003A6790 /* Views */,
 				FE6CB429201ABE35003A6790 /* Wrappers */,
 				FE6CB41B201AAA41003A6790 /* Data Types */,
 				FE6CB418201AA987003A6790 /* API */,
 				FE6CB3F3201AA798003A6790 /* AppDelegate.swift */,
-				FE6CB3F5201AA798003A6790 /* SearchViewController.swift */,
 				FE6CB3F7201AA798003A6790 /* Main.storyboard */,
 				FE6CB3FA201AA798003A6790 /* Assets.xcassets */,
 				FE6CB3FC201AA798003A6790 /* LaunchScreen.storyboard */,
@@ -245,6 +245,14 @@
 				FE6CB439201AC2A8003A6790 /* MockAPIClient.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		FE6CB43B201AC4F5003A6790 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FE6CB3F5201AA798003A6790 /* SearchViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
