@@ -10,6 +10,8 @@ import UIKit
 
 class SearchViewController: UIViewController {
     var apiClient: APIClient = GlobalAPIClient.shared
+    var progressIndicator: ProgressIndicator = GlobalProgressIndicator.shared
+    
     @IBOutlet var latitudeTextField: UITextField!
     @IBOutlet var longitudeTextField: UITextField!
     
@@ -24,7 +26,10 @@ class SearchViewController: UIViewController {
             let latitude = Double(latText),
             let longitude = Double(longText) {
             
+            progressIndicator.show(with: "Searching")
             apiClient.getPassOverTimesFor(latitude: latitude, longitude: longitude, successBlock: handleSearchSuccess, failBlock: handleSearchFail)
+        } else {
+            
         }
     }
     
