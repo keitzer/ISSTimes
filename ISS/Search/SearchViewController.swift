@@ -15,6 +15,12 @@ class SearchViewController: UIViewController {
     @IBOutlet var latitudeTextField: UITextField!
     @IBOutlet var longitudeTextField: UITextField!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     @IBAction func searchPressed() {
         progressIndicator.show(with: "Searching")
         viewModel.getPassOverTimesFor(latitude: latitudeTextField.text, longitude: longitudeTextField.text, successBlock: handleSearchSuccess, failBlock: handleSearchFail)

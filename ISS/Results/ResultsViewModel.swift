@@ -11,4 +11,9 @@ import Foundation
 class ResultsViewModel: ViewModel {
     var apiClient: APIClient = GlobalAPIClient.shared
     var passes = [PassOver]()
+    
+    func getDisplayText(for index: Int) -> String {
+        let pass = passes[index]
+        return "Time: " + pass.risetime.readableDate + "\nSeconds: \(pass.duration)"
+    }
 }

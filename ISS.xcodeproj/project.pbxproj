@@ -38,6 +38,12 @@
 		FE6CB44D201ACEF7003A6790 /* MockSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB44C201ACEF7003A6790 /* MockSearchViewModel.swift */; };
 		FE6CB450201AD274003A6790 /* MockUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB44F201AD274003A6790 /* MockUINavigationController.swift */; };
 		FE6CB453201AD3AC003A6790 /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB452201AD3AC003A6790 /* StoryboardHelper.swift */; };
+		FE6CB455201AD6D9003A6790 /* MockUITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB454201AD6D9003A6790 /* MockUITableView.swift */; };
+		FE6CB457201AD6EB003A6790 /* ResultsTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB456201AD6EB003A6790 /* ResultsTableViewControllerTests.swift */; };
+		FE6CB459201ADA29003A6790 /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB458201ADA29003A6790 /* IntExtensions.swift */; };
+		FE6CB45B201ADB79003A6790 /* ResultsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB45A201ADB79003A6790 /* ResultsViewModelTests.swift */; };
+		FE6CB45D201ADC01003A6790 /* MockResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB45C201ADC01003A6790 /* MockResultsViewModel.swift */; };
+		FE6CB460201ADD43003A6790 /* IntExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB45F201ADD43003A6790 /* IntExtensionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +96,12 @@
 		FE6CB44C201ACEF7003A6790 /* MockSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchViewModel.swift; sourceTree = "<group>"; };
 		FE6CB44F201AD274003A6790 /* MockUINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUINavigationController.swift; sourceTree = "<group>"; };
 		FE6CB452201AD3AC003A6790 /* StoryboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardHelper.swift; sourceTree = "<group>"; };
+		FE6CB454201AD6D9003A6790 /* MockUITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUITableView.swift; sourceTree = "<group>"; };
+		FE6CB456201AD6EB003A6790 /* ResultsTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewControllerTests.swift; sourceTree = "<group>"; };
+		FE6CB458201ADA29003A6790 /* IntExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtensions.swift; sourceTree = "<group>"; };
+		FE6CB45A201ADB79003A6790 /* ResultsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewModelTests.swift; sourceTree = "<group>"; };
+		FE6CB45C201ADC01003A6790 /* MockResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockResultsViewModel.swift; sourceTree = "<group>"; };
+		FE6CB45F201ADD43003A6790 /* IntExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtensionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +185,7 @@
 		FE6CB407201AA798003A6790 /* ISSTests */ = {
 			isa = PBXGroup;
 			children = (
+				FE6CB45E201ADD38003A6790 /* Helpers */,
 				FE6CB438201AC296003A6790 /* Mocks */,
 				FE6CB434201AC233003A6790 /* API */,
 				FE6CB430201AC1DC003A6790 /* View */,
@@ -271,6 +284,8 @@
 				FE6CB43C201AC69D003A6790 /* MockProgressIndicator.swift */,
 				FE6CB44C201ACEF7003A6790 /* MockSearchViewModel.swift */,
 				FE6CB44F201AD274003A6790 /* MockUINavigationController.swift */,
+				FE6CB454201AD6D9003A6790 /* MockUITableView.swift */,
+				FE6CB45C201ADC01003A6790 /* MockResultsViewModel.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -296,6 +311,8 @@
 		FE6CB449201ACE1A003A6790 /* Results */ = {
 			isa = PBXGroup;
 			children = (
+				FE6CB456201AD6EB003A6790 /* ResultsTableViewControllerTests.swift */,
+				FE6CB45A201ADB79003A6790 /* ResultsViewModelTests.swift */,
 			);
 			path = Results;
 			sourceTree = "<group>";
@@ -305,6 +322,15 @@
 			children = (
 				FE6CB43E201ACA0B003A6790 /* AlertHelper.swift */,
 				FE6CB452201AD3AC003A6790 /* StoryboardHelper.swift */,
+				FE6CB458201ADA29003A6790 /* IntExtensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FE6CB45E201ADD38003A6790 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FE6CB45F201ADD43003A6790 /* IntExtensionTests.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -534,6 +560,7 @@
 				FE6CB3F4201AA798003A6790 /* AppDelegate.swift in Sources */,
 				FE6CB421201AAABE003A6790 /* PassOverRequest.swift in Sources */,
 				FE6CB453201AD3AC003A6790 /* StoryboardHelper.swift in Sources */,
+				FE6CB459201ADA29003A6790 /* IntExtensions.swift in Sources */,
 				FE6CB41A201AA9B3003A6790 /* APIClient.swift in Sources */,
 				FE6CB41D201AAA58003A6790 /* PassOverResponse.swift in Sources */,
 				FE6CB441201ACC08003A6790 /* ResultsTableViewController.swift in Sources */,
@@ -554,11 +581,16 @@
 				FE6CB44D201ACEF7003A6790 /* MockSearchViewModel.swift in Sources */,
 				FE6CB436201AC23F003A6790 /* APIClientTests.swift in Sources */,
 				FE6CB424201AAC62003A6790 /* PassOverTests.swift in Sources */,
+				FE6CB45B201ADB79003A6790 /* ResultsViewModelTests.swift in Sources */,
 				FE6CB416201AA946003A6790 /* Mockable.swift in Sources */,
 				FE6CB433201AC1FB003A6790 /* SearchViewControllerTests.swift in Sources */,
+				FE6CB45D201ADC01003A6790 /* MockResultsViewModel.swift in Sources */,
+				FE6CB455201AD6D9003A6790 /* MockUITableView.swift in Sources */,
 				FE6CB450201AD274003A6790 /* MockUINavigationController.swift in Sources */,
+				FE6CB460201ADD43003A6790 /* IntExtensionTests.swift in Sources */,
 				FE6CB42C201ABE4E003A6790 /* SVProgressHUDWrapperTests.swift in Sources */,
 				FE6CB43D201AC69D003A6790 /* MockProgressIndicator.swift in Sources */,
+				FE6CB457201AD6EB003A6790 /* ResultsTableViewControllerTests.swift in Sources */,
 				FE6CB43A201AC2A8003A6790 /* MockAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
