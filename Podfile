@@ -6,6 +6,8 @@ target 'ISS' do
   use_frameworks!
 
   # Pods for ISS
+  pod 'Alamofire'
+  pod 'SVProgressHUD'
 
   target 'ISSTests' do
     inherit! :search_paths
