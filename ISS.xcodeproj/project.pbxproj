@@ -22,6 +22,7 @@
 		FE6CB421201AAABE003A6790 /* PassOverRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB420201AAABE003A6790 /* PassOverRequest.swift */; };
 		FE6CB424201AAC62003A6790 /* PassOverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB423201AAC62003A6790 /* PassOverTests.swift */; };
 		FE6CB426201AAFEF003A6790 /* PassOverRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB425201AAFEF003A6790 /* PassOverRequestTests.swift */; };
+		FE6CB428201AB542003A6790 /* PassOverResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB427201AB542003A6790 /* PassOverResponseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		FE6CB420201AAABE003A6790 /* PassOverRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassOverRequest.swift; sourceTree = "<group>"; };
 		FE6CB423201AAC62003A6790 /* PassOverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassOverTests.swift; sourceTree = "<group>"; };
 		FE6CB425201AAFEF003A6790 /* PassOverRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassOverRequestTests.swift; sourceTree = "<group>"; };
+		FE6CB427201AB542003A6790 /* PassOverResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassOverResponseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 			children = (
 				FE6CB423201AAC62003A6790 /* PassOverTests.swift */,
 				FE6CB425201AAFEF003A6790 /* PassOverRequestTests.swift */,
+				FE6CB427201AB542003A6790 /* PassOverResponseTests.swift */,
 			);
 			path = "Data Types";
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE6CB426201AAFEF003A6790 /* PassOverRequestTests.swift in Sources */,
+				FE6CB428201AB542003A6790 /* PassOverResponseTests.swift in Sources */,
 				FE6CB417201AA946003A6790 /* MockMatchers.swift in Sources */,
 				FE6CB424201AAC62003A6790 /* PassOverTests.swift in Sources */,
 				FE6CB416201AA946003A6790 /* Mockable.swift in Sources */,
