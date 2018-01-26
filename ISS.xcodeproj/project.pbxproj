@@ -36,6 +36,7 @@
 		FE6CB448201ACCD4003A6790 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB447201ACCD4003A6790 /* ViewModel.swift */; };
 		FE6CB44B201ACE24003A6790 /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB44A201ACE24003A6790 /* SearchViewModelTests.swift */; };
 		FE6CB44D201ACEF7003A6790 /* MockSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB44C201ACEF7003A6790 /* MockSearchViewModel.swift */; };
+		FE6CB450201AD274003A6790 /* MockUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB44F201AD274003A6790 /* MockUINavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		FE6CB447201ACCD4003A6790 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		FE6CB44A201ACE24003A6790 /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
 		FE6CB44C201ACEF7003A6790 /* MockSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchViewModel.swift; sourceTree = "<group>"; };
+		FE6CB44F201AD274003A6790 /* MockUINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUINavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +268,7 @@
 				FE6CB439201AC2A8003A6790 /* MockAPIClient.swift */,
 				FE6CB43C201AC69D003A6790 /* MockProgressIndicator.swift */,
 				FE6CB44C201ACEF7003A6790 /* MockSearchViewModel.swift */,
+				FE6CB44F201AD274003A6790 /* MockUINavigationController.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				FE6CB424201AAC62003A6790 /* PassOverTests.swift in Sources */,
 				FE6CB416201AA946003A6790 /* Mockable.swift in Sources */,
 				FE6CB433201AC1FB003A6790 /* SearchViewControllerTests.swift in Sources */,
+				FE6CB450201AD274003A6790 /* MockUINavigationController.swift in Sources */,
 				FE6CB42C201ABE4E003A6790 /* SVProgressHUDWrapperTests.swift in Sources */,
 				FE6CB43D201AC69D003A6790 /* MockProgressIndicator.swift in Sources */,
 				FE6CB43A201AC2A8003A6790 /* MockAPIClient.swift in Sources */,
