@@ -21,6 +21,10 @@ class SearchViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
+    @IBAction func getMyLocationPressed() {
+        
+    }
+    
     @IBAction func searchPressed() {
         progressIndicator.show(with: "Searching")
         viewModel.getPassOverTimesFor(latitude: latitudeTextField.text, longitude: longitudeTextField.text, successBlock: handleSearchSuccess, failBlock: handleSearchFail)

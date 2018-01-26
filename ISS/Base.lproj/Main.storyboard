@@ -73,6 +73,20 @@ and press Search!</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEH-0e-kZT">
+                                <rect key="frame" x="96" y="390" width="183" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ToW-Zg-dUe"/>
+                                    <constraint firstAttribute="width" constant="183" id="k8V-Ph-loG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="28"/>
+                                <state key="normal" title="GET MY LOC">
+                                    <color key="titleColor" red="1" green="0.63529413940000001" blue="0.2588235438" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="getMyLocationPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="AIw-Qr-dYU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -89,10 +103,12 @@ and press Search!</string>
                             <constraint firstItem="I9Y-gt-lk9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TxH-Ja-bPa"/>
                             <constraint firstItem="pvS-Oz-rB7" firstAttribute="centerX" secondItem="Xn7-hW-gff" secondAttribute="centerX" id="UTL-zB-3Wc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xn7-hW-gff" secondAttribute="trailing" constant="51" id="ZL1-Cl-5VF"/>
+                            <constraint firstItem="jEH-0e-kZT" firstAttribute="centerX" secondItem="I9Y-gt-lk9" secondAttribute="centerX" id="bGG-fX-O3g"/>
                             <constraint firstItem="0eA-Eg-Kzc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cJw-oy-KcD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="I9Y-gt-lk9" secondAttribute="bottom" constant="155" id="hFJ-c4-XId"/>
                             <constraint firstItem="Pvv-uO-YTX" firstAttribute="centerX" secondItem="0eA-Eg-Kzc" secondAttribute="centerX" id="l71-sX-j0L"/>
                             <constraint firstItem="Xn7-hW-gff" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="lUQ-L3-ntt"/>
+                            <constraint firstItem="I9Y-gt-lk9" firstAttribute="top" secondItem="jEH-0e-kZT" secondAttribute="bottom" constant="2" id="whI-fc-iPo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
