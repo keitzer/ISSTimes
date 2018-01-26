@@ -44,6 +44,8 @@
 		FE6CB45B201ADB79003A6790 /* ResultsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB45A201ADB79003A6790 /* ResultsViewModelTests.swift */; };
 		FE6CB45D201ADC01003A6790 /* MockResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB45C201ADC01003A6790 /* MockResultsViewModel.swift */; };
 		FE6CB460201ADD43003A6790 /* IntExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB45F201ADD43003A6790 /* IntExtensionTests.swift */; };
+		FE6CB462201ADEAD003A6790 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6CB461201ADEAD003A6790 /* MapKit.framework */; };
+		FE6CB464201ADEB2003A6790 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6CB463201ADEB2003A6790 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,8 @@
 		FE6CB45A201ADB79003A6790 /* ResultsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewModelTests.swift; sourceTree = "<group>"; };
 		FE6CB45C201ADC01003A6790 /* MockResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockResultsViewModel.swift; sourceTree = "<group>"; };
 		FE6CB45F201ADD43003A6790 /* IntExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtensionTests.swift; sourceTree = "<group>"; };
+		FE6CB461201ADEAD003A6790 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FE6CB463201ADEB2003A6790 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6CB464201ADEB2003A6790 /* CoreLocation.framework in Frameworks */,
+				FE6CB462201ADEAD003A6790 /* MapKit.framework in Frameworks */,
 				BDA1707C96D6A210714D4708 /* Pods_ISS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +144,8 @@
 		76D1BB40E69856172F885741 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FE6CB463201ADEB2003A6790 /* CoreLocation.framework */,
+				FE6CB461201ADEAD003A6790 /* MapKit.framework */,
 				A226D9A0DE37B67E8AF94611 /* Pods_ISS.framework */,
 				8A6F3CCB8CB9434621A07253 /* Pods_ISSTests.framework */,
 			);

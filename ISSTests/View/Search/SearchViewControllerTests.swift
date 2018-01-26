@@ -9,17 +9,33 @@
 import Foundation
 import Quick
 import Nimble
+import CoreLocation
 @testable import ISS
 
 class SearchViewControllerTests: QuickSpec {
     override func spec() {
         var subject: SearchViewController!
         
+        beforeEach {
+            subject = SearchViewController()
+            subject.latitudeTextField = UITextField()
+            subject.longitudeTextField = UITextField()
+        }
+        
         describe("SearchViewController") {
             it("has the shared Progress Indicator") {
-                subject = SearchViewController()
-                
                 expect(subject.progressIndicator).to(beIdenticalTo(GlobalProgressIndicator.shared))
+            }
+            
+            describe("get location pressed") {
+                it("fills in the text field from the most recent location") {
+                    subject.mostRecentLocation = CLLocation(latitude: 10, longitude: 50)
+                    
+                    subject.getMyLocationPressed()
+                    
+                    expect(subject.latitudeTextField.text).to(equal("10.0"))
+                    expect(subject.longitudeTextField.text).to(equal("50.0"))
+                }
             }
             
             describe("search") {
@@ -29,10 +45,6 @@ class SearchViewControllerTests: QuickSpec {
                 beforeEach {
                     mockProgressIndicator = MockProgressIndicator()
                     mockViewModel = MockSearchViewModel()
-                    
-                    subject = SearchViewController()
-                    subject.latitudeTextField = UITextField()
-                    subject.longitudeTextField = UITextField()
                     subject.progressIndicator = mockProgressIndicator
                     subject.latitudeTextField.text = "12"
                     subject.longitudeTextField.text = "75"
@@ -94,6 +106,30 @@ class SearchViewControllerTests: QuickSpec {
                     it("hides the progress indicator") {
                         expect(mockProgressIndicator).to(invoke(MockProgressIndicator.InvocationKeys.dismiss))
                     }
+                }
+            }
+            
+            describe("core location delegate") {
+                it("sets the first location returned to the most recent location") {
+                    let fakeManager = CLLocationManager()
+                    let loc1 = CLLocation(latitude: 10, longitude: 20)
+                    let loc2 = CLLocation(latitude: 30, longitude: 30)
+                    let locations = [loc1, loc2]
+                    
+                    subject.locationManager(fakeManager, didUpdateLocations: locations)
+                    
+                    expect(subject.mostRecentLocation).to(equal(loc1))
+                }
+                
+                it("doesn't crash or change the most recent location when there are no location updates") {
+                    let fakeManager = CLLocationManager()
+                    let locations = [CLLocation]()
+                    let expectedLoc = CLLocation(latitude: 50, longitude: 50)
+                    subject.mostRecentLocation = expectedLoc
+                    
+                    subject.locationManager(fakeManager, didUpdateLocations: locations)
+                    
+                    expect(subject.mostRecentLocation).to(equal(expectedLoc))
                 }
             }
         }
