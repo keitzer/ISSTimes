@@ -11,7 +11,7 @@ import Foundation
 struct PassOverRequest {
     let altitude: Int
     let datetime: Int
-    let latitude: Int
-    let longitude: Int
+    let latitude: Float
+    let longitude: Float
     let passes: Int
 }
