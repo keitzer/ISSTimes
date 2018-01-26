@@ -26,5 +26,6 @@ class SearchViewController: UIViewController {
     
     func handleSearchFail(message: String) {
         progressIndicator.dismiss()
+        AlertHelper.show(title: "Whoops", message: message)
     }
 }
