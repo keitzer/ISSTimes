@@ -27,13 +27,19 @@ class GlobalAPIClient: APIClient {
         Alamofire.request(url)
             .validate(statusCode: 200..<201)
             .responseJSON { (response) in
-                if let responseDict = response.value as? [String: Any],
-                    responseDict["message"] as? String == "success",
-                    let response = PassOverResponse(fromDict: responseDict) {
-                    
-                    successBlock(response)
-                }
-                else {
+                if let responseDict = response.value as? [String: Any] {
+                    if responseDict["message"] as? String == "success" {
+                        if let response = PassOverResponse(fromDict: responseDict) {
+                            successBlock(response)
+                        } else {
+                            failBlock("Search failed to load. Try again.")
+                        }
+                    } else if let reason = responseDict["reason"] as? String {
+                        failBlock(reason)
+                    } else {
+                        failBlock("Search failed for an unknown reason. Please double check your input.")
+                    }
+                } else {
                     failBlock("Search failed to load. Try again.")
                 }
         }
