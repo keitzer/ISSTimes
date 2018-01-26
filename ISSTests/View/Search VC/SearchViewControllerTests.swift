@@ -27,7 +27,7 @@ class SearchViewControllerTests: QuickSpec {
                 expect(subject.progressIndicator).to(beIdenticalTo(GlobalProgressIndicator.shared))
             }
             
-            describe("search pressed") {
+            describe("search") {
                 var mockClient: MockAPIClient!
                 var mockProgressIndicator: MockProgressIndicator!
                 
@@ -44,20 +44,44 @@ class SearchViewControllerTests: QuickSpec {
                     subject.longitudeTextField.text = "75"
                 }
                 
-                it("calls the getPassOverTimesFor api method with the lat and long text values") {
-                    subject.searchPressed()
+                describe("search pressed") {
+                    beforeEach {
+                            subject.searchPressed()
+                    }
                     
-                    let params = mockClient.parameters(for: MockAPIClient.InvocationKeys.getPassOverTimesFor)
+                    it("calls the getPassOverTimesFor api method with the lat and long text values") {
+                        let params = mockClient.parameters(for: MockAPIClient.InvocationKeys.getPassOverTimesFor)
+                        
+                        expect(mockClient).to(invoke(MockAPIClient.InvocationKeys.getPassOverTimesFor))
+                        expect(params?[0] as? Double).to(equal(12))
+                        expect(params?[1] as? Double).to(equal(75))
+                    }
                     
-                    expect(mockClient).to(invoke(MockAPIClient.InvocationKeys.getPassOverTimesFor))
-                    expect(params?[0] as? Double).to(equal(12))
-                    expect(params?[1] as? Double).to(equal(75))
+                    it("shows the progress indicator") {
+                        expect(mockProgressIndicator).to(invoke(MockProgressIndicator.InvocationKeys.showWithStatus, withParameter: "Searching"))
+                    }
                 }
                 
-                it("shows the progress indicator") {
-                    subject.searchPressed()
+                describe("on search success") {
+                    beforeEach {
+                        let response = PassOverResponse(request: PassOverRequest(altitude: 1, datetime: 1, latitude: 1, longitude: 1, passes: 1), passes: [])
+                        
+                        subject.handleSearchSuccess(response: response)
+                    }
                     
-                    expect(mockProgressIndicator).to(invoke(MockProgressIndicator.InvocationKeys.showWithStatus, withParameter: "Searching"))
+                    it("hides the progress indicator") {
+                        expect(mockProgressIndicator).to(invoke(MockProgressIndicator.InvocationKeys.dismiss))
+                    }
+                }
+                
+                describe("on search failure") {
+                    beforeEach {
+                        subject.handleSearchFail(message: "Message")
+                    }
+                    
+                    it("hides the progress indicator") {
+                        expect(mockProgressIndicator).to(invoke(MockProgressIndicator.InvocationKeys.dismiss))
+                    }
                 }
             }
         }

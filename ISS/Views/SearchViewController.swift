@@ -34,10 +34,10 @@ class SearchViewController: UIViewController {
     }
     
     func handleSearchSuccess(response: PassOverResponse) {
-        
+        progressIndicator.dismiss()
     }
     
     func handleSearchFail(message: String) {
-        
+        progressIndicator.dismiss()
     }
 }
