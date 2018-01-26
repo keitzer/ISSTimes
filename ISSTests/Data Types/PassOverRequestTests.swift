@@ -61,15 +61,39 @@ class PassOverRequestTests: QuickSpec {
             describe("init from dictionary") {
                 it("can be initialized successfully from dictionary") {
                     let subject = PassOverRequest(fromDict: [
-                        "altitude": 100
-                        "datetime": 500
-                        "latitude": 10.8
-                        "longitude": 12.1
+                        "altitude": 100,
+                        "datetime": 500,
+                        "latitude": 10.8,
+                        "longitude": 12.1,
                         "passes": 16
                     ])
                     
                     expect(subject).notTo(beNil())
+                    expect(subject?.altitude).to(equal(100))
+                    expect(subject?.datetime).to(equal(500))
+                    expect(subject?.latitude).to(equal(10.8))
+                    expect(subject?.longitude).to(equal(12.1))
+                    expect(subject?.passes).to(equal(16))
                 }
+                
+                it("can be initialized successfully from dictionary when lat long are whole numbers") {
+                    let subject = PassOverRequest(fromDict: [
+                        "altitude": 100,
+                        "datetime": 500,
+                        "latitude": 10,
+                        "longitude": 12,
+                        "passes": 16
+                    ])
+                    
+                    expect(subject).notTo(beNil())
+                    expect(subject?.altitude).to(equal(100))
+                    expect(subject?.datetime).to(equal(500))
+                    expect(subject?.latitude).to(equal(10))
+                    expect(subject?.longitude).to(equal(12))
+                    expect(subject?.passes).to(equal(16))
+                }
+                
+                // For the sake of time and my sanity I will not include all permutations and "what if this thing couldn't be interpreted" scenarios. If you want to see an example of this, look at PassOverTests.swift
             }
         }
     }

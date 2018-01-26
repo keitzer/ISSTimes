@@ -38,4 +38,20 @@ class PassOverRequest: Equatable {
         self.longitude = longitude
         self.passes = passes
     }
+    
+    init?(fromDict dictionary: [String: Any]) {
+        guard let altitude = dictionary["altitude"] as? Int,
+            let datetime = dictionary["datetime"] as? Int,
+            let latitude = dictionary["latitude"] as? Double,
+            let longitude = dictionary["longitude"] as? Double,
+            let passes = dictionary["passes"] as? Int else {
+                return nil
+        }
+        
+        self.altitude = altitude
+        self.datetime = datetime
+        self.latitude = Float(latitude)
+        self.longitude = Float(longitude)
+        self.passes = passes
+    }
 }
