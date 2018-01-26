@@ -10,7 +10,7 @@
 		3EAD99CF23106E44B25E2339 /* Pods_ISSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A6F3CCB8CB9434621A07253 /* Pods_ISSTests.framework */; };
 		BDA1707C96D6A210714D4708 /* Pods_ISS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A226D9A0DE37B67E8AF94611 /* Pods_ISS.framework */; };
 		FE6CB3F4201AA798003A6790 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB3F3201AA798003A6790 /* AppDelegate.swift */; };
-		FE6CB3F6201AA798003A6790 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB3F5201AA798003A6790 /* ViewController.swift */; };
+		FE6CB3F6201AA798003A6790 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB3F5201AA798003A6790 /* SearchViewController.swift */; };
 		FE6CB3F9201AA798003A6790 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE6CB3F7201AA798003A6790 /* Main.storyboard */; };
 		FE6CB3FB201AA798003A6790 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE6CB3FA201AA798003A6790 /* Assets.xcassets */; };
 		FE6CB3FE201AA798003A6790 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE6CB3FC201AA798003A6790 /* LaunchScreen.storyboard */; };
@@ -25,6 +25,8 @@
 		FE6CB428201AB542003A6790 /* PassOverResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB427201AB542003A6790 /* PassOverResponseTests.swift */; };
 		FE6CB42C201ABE4E003A6790 /* SVProgressHUDWrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB42B201ABE4E003A6790 /* SVProgressHUDWrapperTests.swift */; };
 		FE6CB42E201ABE6F003A6790 /* ProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB42D201ABE6F003A6790 /* ProgressIndicator.swift */; };
+		FE6CB433201AC1FB003A6790 /* SearchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB432201AC1FB003A6790 /* SearchViewControllerTests.swift */; };
+		FE6CB436201AC23F003A6790 /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB435201AC23F003A6790 /* APIClientTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +48,7 @@
 		A226D9A0DE37B67E8AF94611 /* Pods_ISS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ISS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE6CB3F0201AA798003A6790 /* ISS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE6CB3F3201AA798003A6790 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FE6CB3F5201AA798003A6790 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FE6CB3F5201AA798003A6790 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		FE6CB3F8201AA798003A6790 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE6CB3FA201AA798003A6790 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE6CB3FD201AA798003A6790 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,6 +66,8 @@
 		FE6CB427201AB542003A6790 /* PassOverResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassOverResponseTests.swift; sourceTree = "<group>"; };
 		FE6CB42B201ABE4E003A6790 /* SVProgressHUDWrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVProgressHUDWrapperTests.swift; sourceTree = "<group>"; };
 		FE6CB42D201ABE6F003A6790 /* ProgressIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicator.swift; sourceTree = "<group>"; };
+		FE6CB432201AC1FB003A6790 /* SearchViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerTests.swift; sourceTree = "<group>"; };
+		FE6CB435201AC23F003A6790 /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +137,7 @@
 				FE6CB41B201AAA41003A6790 /* Data Types */,
 				FE6CB418201AA987003A6790 /* API */,
 				FE6CB3F3201AA798003A6790 /* AppDelegate.swift */,
-				FE6CB3F5201AA798003A6790 /* ViewController.swift */,
+				FE6CB3F5201AA798003A6790 /* SearchViewController.swift */,
 				FE6CB3F7201AA798003A6790 /* Main.storyboard */,
 				FE6CB3FA201AA798003A6790 /* Assets.xcassets */,
 				FE6CB3FC201AA798003A6790 /* LaunchScreen.storyboard */,
@@ -145,6 +149,8 @@
 		FE6CB407201AA798003A6790 /* ISSTests */ = {
 			isa = PBXGroup;
 			children = (
+				FE6CB434201AC233003A6790 /* API */,
+				FE6CB430201AC1DC003A6790 /* View */,
 				FE6CB42A201ABE3A003A6790 /* Wrappers */,
 				FE6CB422201AAC58003A6790 /* Data Types */,
 				FE6CB413201AA946003A6790 /* Test Utils */,
@@ -204,6 +210,30 @@
 				FE6CB42B201ABE4E003A6790 /* SVProgressHUDWrapperTests.swift */,
 			);
 			path = Wrappers;
+			sourceTree = "<group>";
+		};
+		FE6CB430201AC1DC003A6790 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE6CB431201AC1E3003A6790 /* Search VC */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE6CB431201AC1E3003A6790 /* Search VC */ = {
+			isa = PBXGroup;
+			children = (
+				FE6CB432201AC1FB003A6790 /* SearchViewControllerTests.swift */,
+			);
+			path = "Search VC";
+			sourceTree = "<group>";
+		};
+		FE6CB434201AC233003A6790 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FE6CB435201AC23F003A6790 /* APIClientTests.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,7 +455,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE6CB42E201ABE6F003A6790 /* ProgressIndicator.swift in Sources */,
-				FE6CB3F6201AA798003A6790 /* ViewController.swift in Sources */,
+				FE6CB3F6201AA798003A6790 /* SearchViewController.swift in Sources */,
 				FE6CB3F4201AA798003A6790 /* AppDelegate.swift in Sources */,
 				FE6CB421201AAABE003A6790 /* PassOverRequest.swift in Sources */,
 				FE6CB41A201AA9B3003A6790 /* APIClient.swift in Sources */,
@@ -441,8 +471,10 @@
 				FE6CB426201AAFEF003A6790 /* PassOverRequestTests.swift in Sources */,
 				FE6CB428201AB542003A6790 /* PassOverResponseTests.swift in Sources */,
 				FE6CB417201AA946003A6790 /* MockMatchers.swift in Sources */,
+				FE6CB436201AC23F003A6790 /* APIClientTests.swift in Sources */,
 				FE6CB424201AAC62003A6790 /* PassOverTests.swift in Sources */,
 				FE6CB416201AA946003A6790 /* Mockable.swift in Sources */,
+				FE6CB433201AC1FB003A6790 /* SearchViewControllerTests.swift in Sources */,
 				FE6CB42C201ABE4E003A6790 /* SVProgressHUDWrapperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
