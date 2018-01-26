@@ -51,6 +51,38 @@ class PassOverResponseTests: QuickSpec {
                     expect(item1).notTo(equal(item2))
                 }
             }
+            
+            describe("init from dictionary") {
+                it("can be initialized successfully from dictionary") {
+                    let data: [String: Any] = [
+                        "message": "success",
+                        "request": [
+                            "altitude": 100,
+                            "datetime": 1516925875,
+                            "latitude": 50.2,
+                            "longitude": 100.1,
+                            "passes": 5
+                        ],
+                        "response": [
+                            [
+                                "duration": 555,
+                                "risetime": 1516966899
+                            ],
+                            [
+                                "duration": 637,
+                                "risetime": 1516972617
+                            ]
+                        ]
+                    ]
+                    
+                    let subject = PassOverResponse(fromDict: data)
+                    
+                    expect(subject).notTo(beNil())
+                    
+                }
+                
+                // For the sake of time and my sanity I will not include all permutations and "what if this thing couldn't be interpreted" scenarios. If you want to see an example of this, look at PassOverTests.swift
+            }
         }
     }
 }

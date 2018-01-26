@@ -39,10 +39,12 @@ class PassOverTests: QuickSpec {
             
             describe("init from dictionary") {
                 it("can be loaded from dictionary") {
-                    let item = PassOver(fromDict: [
-                            "duration" : 50,
-                            "risetime" : 1000,
-                        ])
+                    let data = [
+                        "duration" : 50,
+                        "risetime" : 1000,
+                    ]
+                    
+                    let item = PassOver(fromDict: )
                     
                     expect(item).notTo(beNil())
                     expect(item?.duration).to(equal(50))
@@ -50,35 +52,43 @@ class PassOverTests: QuickSpec {
                 }
                 
                 it("returns nil when duration is missing") {
-                    let item = PassOver(fromDict: [
-                            "risetime" : 1000
-                        ])
+                    let data = [
+                        "risetime" : 1000
+                    ]
+                    
+                    let item = PassOver(fromDict: data)
                     
                     expect(item).to(beNil())
                 }
                 
                 it("returns nil when risetime is missing") {
-                    let item = PassOver(fromDict: [
-                            "duration" : 50
-                        ])
+                    let data = [
+                        "duration" : 50
+                    ]
+                    
+                    let item = PassOver(fromDict: data)
                     
                     expect(item).to(beNil())
                 }
                 
                 it("returns nil when duration cannot be cast to an int directly") {
-                    let item = PassOver(fromDict: [
-                            "duration" : "500",
-                            "risetime" : 1000,
-                        ])
+                    let data = [
+                        "duration" : "500",
+                        "risetime" : 1000,
+                    ]
+                    
+                    let item = PassOver(fromDict: data)
                     
                     expect(item).to(beNil())
                 }
                 
                 it("returns nil when risetime cannot be cast to an int directly") {
-                    let item = PassOver(fromDict: [
-                            "duration" : 50,
-                            "risetime" : "1000",
-                        ])
+                    let data = [
+                        "duration" : 50,
+                        "risetime" : "1000",
+                    ]
+                    
+                    let item = PassOver(fromDict: data)
                     
                     expect(item).to(beNil())
                 }

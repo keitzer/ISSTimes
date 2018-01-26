@@ -60,13 +60,15 @@ class PassOverRequestTests: QuickSpec {
             
             describe("init from dictionary") {
                 it("can be initialized successfully from dictionary") {
-                    let subject = PassOverRequest(fromDict: [
+                    let data = [
                         "altitude": 100,
                         "datetime": 500,
                         "latitude": 10.8,
                         "longitude": 12.1,
                         "passes": 16
-                    ])
+                    ]
+                    
+                    let subject = PassOverRequest(fromDict: data)
                     
                     expect(subject).notTo(beNil())
                     expect(subject?.altitude).to(equal(100))
@@ -77,13 +79,15 @@ class PassOverRequestTests: QuickSpec {
                 }
                 
                 it("can be initialized successfully from dictionary when lat long are whole numbers") {
-                    let subject = PassOverRequest(fromDict: [
+                    let data = [
                         "altitude": 100,
                         "datetime": 500,
                         "latitude": 10,
                         "longitude": 12,
                         "passes": 16
-                    ])
+                    ]
+                    
+                    let subject = PassOverRequest(fromDict: data)
                     
                     expect(subject).notTo(beNil())
                     expect(subject?.altitude).to(equal(100))
