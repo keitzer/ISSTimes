@@ -27,6 +27,7 @@
 		FE6CB42E201ABE6F003A6790 /* ProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB42D201ABE6F003A6790 /* ProgressIndicator.swift */; };
 		FE6CB433201AC1FB003A6790 /* SearchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB432201AC1FB003A6790 /* SearchViewControllerTests.swift */; };
 		FE6CB436201AC23F003A6790 /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB435201AC23F003A6790 /* APIClientTests.swift */; };
+		FE6CB43A201AC2A8003A6790 /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB439201AC2A8003A6790 /* MockAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		FE6CB42D201ABE6F003A6790 /* ProgressIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicator.swift; sourceTree = "<group>"; };
 		FE6CB432201AC1FB003A6790 /* SearchViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerTests.swift; sourceTree = "<group>"; };
 		FE6CB435201AC23F003A6790 /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
+		FE6CB439201AC2A8003A6790 /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 		FE6CB407201AA798003A6790 /* ISSTests */ = {
 			isa = PBXGroup;
 			children = (
+				FE6CB438201AC296003A6790 /* Mocks */,
 				FE6CB434201AC233003A6790 /* API */,
 				FE6CB430201AC1DC003A6790 /* View */,
 				FE6CB42A201ABE3A003A6790 /* Wrappers */,
@@ -234,6 +237,14 @@
 				FE6CB435201AC23F003A6790 /* APIClientTests.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		FE6CB438201AC296003A6790 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				FE6CB439201AC2A8003A6790 /* MockAPIClient.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -476,6 +487,7 @@
 				FE6CB416201AA946003A6790 /* Mockable.swift in Sources */,
 				FE6CB433201AC1FB003A6790 /* SearchViewControllerTests.swift in Sources */,
 				FE6CB42C201ABE4E003A6790 /* SVProgressHUDWrapperTests.swift in Sources */,
+				FE6CB43A201AC2A8003A6790 /* MockAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

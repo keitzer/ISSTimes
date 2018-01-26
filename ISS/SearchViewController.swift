@@ -9,8 +9,9 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-
     var apiClient: APIClient = GlobalAPIClient.shared
+    @IBOutlet var latitudeTextField: UITextField!
+    @IBOutlet var longitudeTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()

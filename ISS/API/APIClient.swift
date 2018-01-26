@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 protocol APIClient {
-    func getPassOverTimesFor(latitude: Float, longitude: Float, successBlock: @escaping (PassOverResponse) -> Void, failBlock: @escaping (String) -> Void)
+    func getPassOverTimesFor(latitude: Double, longitude: Double, successBlock: @escaping (PassOverResponse) -> Void, failBlock: @escaping (String) -> Void)
 }
 
 class GlobalAPIClient: APIClient {
@@ -18,7 +18,7 @@ class GlobalAPIClient: APIClient {
     
     static let shared = GlobalAPIClient()
     
-    func getPassOverTimesFor(latitude: Float, longitude: Float, successBlock: @escaping (PassOverResponse) -> Void, failBlock: @escaping (String) -> Void) {
+    func getPassOverTimesFor(latitude: Double, longitude: Double, successBlock: @escaping (PassOverResponse) -> Void, failBlock: @escaping (String) -> Void) {
 
         // for the sake of speed, and also "i know alamore is a pain to test", I skipped testing this method
 
