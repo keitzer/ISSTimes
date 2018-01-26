@@ -29,7 +29,7 @@ class SearchViewController: UIViewController {
             progressIndicator.show(with: "Searching")
             apiClient.getPassOverTimesFor(latitude: latitude, longitude: longitude, successBlock: handleSearchSuccess, failBlock: handleSearchFail)
         } else {
-            
+            AlertHelper.show(title: "Whoops", message: "You need to enter numbers for the latitude and longitude.")
         }
     }
     

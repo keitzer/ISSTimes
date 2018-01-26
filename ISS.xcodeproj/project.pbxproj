@@ -29,6 +29,7 @@
 		FE6CB436201AC23F003A6790 /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB435201AC23F003A6790 /* APIClientTests.swift */; };
 		FE6CB43A201AC2A8003A6790 /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB439201AC2A8003A6790 /* MockAPIClient.swift */; };
 		FE6CB43D201AC69D003A6790 /* MockProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB43C201AC69D003A6790 /* MockProgressIndicator.swift */; };
+		FE6CB43F201ACA0B003A6790 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB43E201ACA0B003A6790 /* AlertHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		FE6CB435201AC23F003A6790 /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
 		FE6CB439201AC2A8003A6790 /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
 		FE6CB43C201AC69D003A6790 /* MockProgressIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProgressIndicator.swift; sourceTree = "<group>"; };
+		FE6CB43E201ACA0B003A6790 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				FE6CB42D201ABE6F003A6790 /* ProgressIndicator.swift */,
+				FE6CB43E201ACA0B003A6790 /* AlertHelper.swift */,
 			);
 			path = Wrappers;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				FE6CB421201AAABE003A6790 /* PassOverRequest.swift in Sources */,
 				FE6CB41A201AA9B3003A6790 /* APIClient.swift in Sources */,
 				FE6CB41D201AAA58003A6790 /* PassOverResponse.swift in Sources */,
+				FE6CB43F201ACA0B003A6790 /* AlertHelper.swift in Sources */,
 				FE6CB41F201AAA60003A6790 /* PassOver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
