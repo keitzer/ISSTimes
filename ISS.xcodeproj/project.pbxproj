@@ -23,6 +23,8 @@
 		FE6CB424201AAC62003A6790 /* PassOverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB423201AAC62003A6790 /* PassOverTests.swift */; };
 		FE6CB426201AAFEF003A6790 /* PassOverRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB425201AAFEF003A6790 /* PassOverRequestTests.swift */; };
 		FE6CB428201AB542003A6790 /* PassOverResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB427201AB542003A6790 /* PassOverResponseTests.swift */; };
+		FE6CB42C201ABE4E003A6790 /* SVProgressHUDWrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB42B201ABE4E003A6790 /* SVProgressHUDWrapperTests.swift */; };
+		FE6CB42E201ABE6F003A6790 /* ProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB42D201ABE6F003A6790 /* ProgressIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		FE6CB423201AAC62003A6790 /* PassOverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassOverTests.swift; sourceTree = "<group>"; };
 		FE6CB425201AAFEF003A6790 /* PassOverRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassOverRequestTests.swift; sourceTree = "<group>"; };
 		FE6CB427201AB542003A6790 /* PassOverResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassOverResponseTests.swift; sourceTree = "<group>"; };
+		FE6CB42B201ABE4E003A6790 /* SVProgressHUDWrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVProgressHUDWrapperTests.swift; sourceTree = "<group>"; };
+		FE6CB42D201ABE6F003A6790 /* ProgressIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 		FE6CB3F2201AA798003A6790 /* ISS */ = {
 			isa = PBXGroup;
 			children = (
+				FE6CB429201ABE35003A6790 /* Wrappers */,
 				FE6CB41B201AAA41003A6790 /* Data Types */,
 				FE6CB418201AA987003A6790 /* API */,
 				FE6CB3F3201AA798003A6790 /* AppDelegate.swift */,
@@ -140,6 +145,7 @@
 		FE6CB407201AA798003A6790 /* ISSTests */ = {
 			isa = PBXGroup;
 			children = (
+				FE6CB42A201ABE3A003A6790 /* Wrappers */,
 				FE6CB422201AAC58003A6790 /* Data Types */,
 				FE6CB413201AA946003A6790 /* Test Utils */,
 				FE6CB40A201AA798003A6790 /* Info.plist */,
@@ -182,6 +188,22 @@
 				FE6CB427201AB542003A6790 /* PassOverResponseTests.swift */,
 			);
 			path = "Data Types";
+			sourceTree = "<group>";
+		};
+		FE6CB429201ABE35003A6790 /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				FE6CB42D201ABE6F003A6790 /* ProgressIndicator.swift */,
+			);
+			path = Wrappers;
+			sourceTree = "<group>";
+		};
+		FE6CB42A201ABE3A003A6790 /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				FE6CB42B201ABE4E003A6790 /* SVProgressHUDWrapperTests.swift */,
+			);
+			path = Wrappers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,6 +424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6CB42E201ABE6F003A6790 /* ProgressIndicator.swift in Sources */,
 				FE6CB3F6201AA798003A6790 /* ViewController.swift in Sources */,
 				FE6CB3F4201AA798003A6790 /* AppDelegate.swift in Sources */,
 				FE6CB421201AAABE003A6790 /* PassOverRequest.swift in Sources */,
@@ -420,6 +443,7 @@
 				FE6CB417201AA946003A6790 /* MockMatchers.swift in Sources */,
 				FE6CB424201AAC62003A6790 /* PassOverTests.swift in Sources */,
 				FE6CB416201AA946003A6790 /* Mockable.swift in Sources */,
+				FE6CB42C201ABE4E003A6790 /* SVProgressHUDWrapperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
