@@ -25,7 +25,6 @@ class GlobalAPIClient: APIClient {
         let url = "http://api.open-notify.org/iss-pass.json?lat=\(latitude)&lon=\(longitude)"
 
         Alamofire.request(url)
-            .validate(statusCode: 200..<201)
             .responseJSON { (response) in
                 if let responseDict = response.value as? [String: Any] {
                     if responseDict["message"] as? String == "success" {

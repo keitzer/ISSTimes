@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, UITextFieldDelegate {
     var progressIndicator: ProgressIndicator = GlobalProgressIndicator.shared
     var viewModel = SearchViewModel()
     
@@ -33,6 +33,15 @@ class SearchViewController: UIViewController {
     
     @objc func didTapScreen() {
         view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == latitudeTextField {
+            longitudeTextField.becomeFirstResponder()
+        } else if textField == longitudeTextField {
+            searchPressed()
+        }
+        return true
     }
     
     @IBAction func getMyLocationPressed() {
