@@ -58,14 +58,31 @@ class SearchViewControllerTests: QuickSpec {
                 }
                 
                 describe("on search success") {
+                    var expectedPasses: [PassOver]!
+                    var mockNavController: MockUINavigationController!
+                    
                     beforeEach {
-                        let response = PassOverResponse(request: PassOverRequest(altitude: 1, datetime: 1, latitude: 1, longitude: 1, passes: 1), passes: [])
+                        mockNavController = MockUINavigationController(rootViewController: subject)
+                        mockNavController.reset()
+                        
+                        expectedPasses = [
+                            PassOver(duration: 10, risetime: 20),
+                            PassOver(duration: 20, risetime: 50)
+                        ]
+                        
+                        let response = PassOverResponse(request: PassOverRequest(altitude: 1, datetime: 1, latitude: 1, longitude: 1, passes: 1), passes: expectedPasses)
                         
                         subject.handleSearchSuccess(response: response)
                     }
                     
                     it("hides the progress indicator") {
                         expect(mockProgressIndicator).to(invoke(MockProgressIndicator.InvocationKeys.dismiss))
+                    }
+                    
+                    it("sets the view model passes") {
+                        let pushedVC: ResultsTableViewController? = mockNavController.parameter(for: MockUINavigationController.InvocationKeys.pushViewController, atParameterIndex: 0)
+                        
+                        expect(pushedVC?.viewModel.passes).to(equal(expectedPasses))
                     }
                 }
                 

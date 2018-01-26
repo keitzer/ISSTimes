@@ -37,6 +37,7 @@
 		FE6CB44B201ACE24003A6790 /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB44A201ACE24003A6790 /* SearchViewModelTests.swift */; };
 		FE6CB44D201ACEF7003A6790 /* MockSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB44C201ACEF7003A6790 /* MockSearchViewModel.swift */; };
 		FE6CB450201AD274003A6790 /* MockUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB44F201AD274003A6790 /* MockUINavigationController.swift */; };
+		FE6CB453201AD3AC003A6790 /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB452201AD3AC003A6790 /* StoryboardHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		FE6CB44A201ACE24003A6790 /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
 		FE6CB44C201ACEF7003A6790 /* MockSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchViewModel.swift; sourceTree = "<group>"; };
 		FE6CB44F201AD274003A6790 /* MockUINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUINavigationController.swift; sourceTree = "<group>"; };
+		FE6CB452201AD3AC003A6790 /* StoryboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 		FE6CB3F2201AA798003A6790 /* ISS */ = {
 			isa = PBXGroup;
 			children = (
+				FE6CB451201AD394003A6790 /* Helpers */,
 				FE6CB442201ACC0C003A6790 /* Results */,
 				FE6CB43B201AC4F5003A6790 /* Search */,
 				FE6CB429201ABE35003A6790 /* Wrappers */,
@@ -223,7 +226,6 @@
 			isa = PBXGroup;
 			children = (
 				FE6CB42D201ABE6F003A6790 /* ProgressIndicator.swift */,
-				FE6CB43E201ACA0B003A6790 /* AlertHelper.swift */,
 			);
 			path = Wrappers;
 			sourceTree = "<group>";
@@ -296,6 +298,15 @@
 			children = (
 			);
 			path = Results;
+			sourceTree = "<group>";
+		};
+		FE6CB451201AD394003A6790 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FE6CB43E201ACA0B003A6790 /* AlertHelper.swift */,
+				FE6CB452201AD3AC003A6790 /* StoryboardHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -522,6 +533,7 @@
 				FE6CB3F6201AA798003A6790 /* SearchViewController.swift in Sources */,
 				FE6CB3F4201AA798003A6790 /* AppDelegate.swift in Sources */,
 				FE6CB421201AAABE003A6790 /* PassOverRequest.swift in Sources */,
+				FE6CB453201AD3AC003A6790 /* StoryboardHelper.swift in Sources */,
 				FE6CB41A201AA9B3003A6790 /* APIClient.swift in Sources */,
 				FE6CB41D201AAA58003A6790 /* PassOverResponse.swift in Sources */,
 				FE6CB441201ACC08003A6790 /* ResultsTableViewController.swift in Sources */,

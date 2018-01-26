@@ -22,6 +22,11 @@ class SearchViewController: UIViewController {
     
     func handleSearchSuccess(response: PassOverResponse) {
         progressIndicator.dismiss()
+        
+        if let vc: ResultsTableViewController = StoryboardHelper.getVC(withID: "Results") {
+            vc.viewModel.passes = response.passes
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     func handleSearchFail(message: String) {
