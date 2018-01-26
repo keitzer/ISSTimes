@@ -20,6 +20,7 @@
 		FE6CB41D201AAA58003A6790 /* PassOverResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB41C201AAA58003A6790 /* PassOverResponse.swift */; };
 		FE6CB41F201AAA60003A6790 /* PassOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB41E201AAA60003A6790 /* PassOver.swift */; };
 		FE6CB421201AAABE003A6790 /* PassOverRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB420201AAABE003A6790 /* PassOverRequest.swift */; };
+		FE6CB424201AAC62003A6790 /* PassOverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB423201AAC62003A6790 /* PassOverTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		FE6CB41C201AAA58003A6790 /* PassOverResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassOverResponse.swift; sourceTree = "<group>"; };
 		FE6CB41E201AAA60003A6790 /* PassOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassOver.swift; sourceTree = "<group>"; };
 		FE6CB420201AAABE003A6790 /* PassOverRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassOverRequest.swift; sourceTree = "<group>"; };
+		FE6CB423201AAC62003A6790 /* PassOverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassOverTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 		FE6CB407201AA798003A6790 /* ISSTests */ = {
 			isa = PBXGroup;
 			children = (
+				FE6CB422201AAC58003A6790 /* Data Types */,
 				FE6CB413201AA946003A6790 /* Test Utils */,
 				FE6CB40A201AA798003A6790 /* Info.plist */,
 			);
@@ -163,6 +166,14 @@
 				FE6CB41C201AAA58003A6790 /* PassOverResponse.swift */,
 				FE6CB41E201AAA60003A6790 /* PassOver.swift */,
 				FE6CB420201AAABE003A6790 /* PassOverRequest.swift */,
+			);
+			path = "Data Types";
+			sourceTree = "<group>";
+		};
+		FE6CB422201AAC58003A6790 /* Data Types */ = {
+			isa = PBXGroup;
+			children = (
+				FE6CB423201AAC62003A6790 /* PassOverTests.swift */,
 			);
 			path = "Data Types";
 			sourceTree = "<group>";
@@ -399,6 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE6CB417201AA946003A6790 /* MockMatchers.swift in Sources */,
+				FE6CB424201AAC62003A6790 /* PassOverTests.swift in Sources */,
 				FE6CB416201AA946003A6790 /* Mockable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
