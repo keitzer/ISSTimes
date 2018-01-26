@@ -16,11 +16,6 @@ class SearchViewControllerTests: QuickSpec {
         var subject: SearchViewController!
         
         describe("SearchViewController") {
-            it("has the shared API Client") {
-                subject = SearchViewController()
-                
-                expect(subject.apiClient).to(beIdenticalTo(GlobalAPIClient.shared))
-            }
             it("has the shared Progress Indicator") {
                 subject = SearchViewController()
                 
@@ -28,33 +23,33 @@ class SearchViewControllerTests: QuickSpec {
             }
             
             describe("search") {
-                var mockClient: MockAPIClient!
                 var mockProgressIndicator: MockProgressIndicator!
+                var mockViewModel: MockSearchViewModel!
                 
                 beforeEach {
-                    mockClient = MockAPIClient()
                     mockProgressIndicator = MockProgressIndicator()
+                    mockViewModel = MockSearchViewModel()
                     
                     subject = SearchViewController()
                     subject.latitudeTextField = UITextField()
                     subject.longitudeTextField = UITextField()
-                    subject.apiClient = mockClient
                     subject.progressIndicator = mockProgressIndicator
                     subject.latitudeTextField.text = "12"
                     subject.longitudeTextField.text = "75"
+                    subject.viewModel = mockViewModel
                 }
                 
                 describe("search pressed") {
                     beforeEach {
-                            subject.searchPressed()
+                        subject.searchPressed()
                     }
                     
-                    it("calls the getPassOverTimesFor api method with the lat and long text values") {
-                        let params = mockClient.parameters(for: MockAPIClient.InvocationKeys.getPassOverTimesFor)
+                    it("calls the getPassOverTimesFor view model method with the lat and long text values") {
+                        let params = mockViewModel.parameters(for: MockSearchViewModel.InvocationKeys.getPassOverTimesFor)
                         
-                        expect(mockClient).to(invoke(MockAPIClient.InvocationKeys.getPassOverTimesFor))
-                        expect(params?[0] as? Double).to(equal(12))
-                        expect(params?[1] as? Double).to(equal(75))
+                        expect(mockViewModel).to(invoke(MockSearchViewModel.InvocationKeys.getPassOverTimesFor))
+                        expect(params?[0] as? String).to(equal("12"))
+                        expect(params?[1] as? String).to(equal("75"))
                     }
                     
                     it("shows the progress indicator") {

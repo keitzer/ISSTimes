@@ -16,7 +16,7 @@ class MockAPIClient: APIClient, Mockable {
         static let getPassOverTimesFor = "getPassOverTimesFor"
     }
     
-    func getPassOverTimesFor(latitude: Double, longitude: Double, successBlock: @escaping (PassOverResponse) -> Void, failBlock: @escaping (String) -> Void) {
+    func getPassOverTimesFor(latitude: Double, longitude: Double, successBlock: ((PassOverResponse) -> Void)? = nil, failBlock: ((String) -> Void)? = nil) {
         record(invocation: InvocationKeys.getPassOverTimesFor, with: latitude, longitude, successBlock, failBlock)
     }
 }

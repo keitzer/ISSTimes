@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 protocol APIClient {
-    func getPassOverTimesFor(latitude: Double, longitude: Double, successBlock: @escaping (PassOverResponse) -> Void, failBlock: @escaping (String) -> Void)
+    func getPassOverTimesFor(latitude: Double, longitude: Double, successBlock: ((PassOverResponse) -> Void)?, failBlock: ((String) -> Void)?)
 }
 
 class GlobalAPIClient: APIClient {
@@ -18,7 +18,7 @@ class GlobalAPIClient: APIClient {
     
     static let shared = GlobalAPIClient()
     
-    func getPassOverTimesFor(latitude: Double, longitude: Double, successBlock: @escaping (PassOverResponse) -> Void, failBlock: @escaping (String) -> Void) {
+    func getPassOverTimesFor(latitude: Double, longitude: Double, successBlock: ((PassOverResponse) -> Void)? = nil, failBlock: ((String) -> Void)? = nil) {
 
         // for the sake of speed, and also "i know alamore is a pain to test", I skipped testing this method
 
@@ -30,17 +30,17 @@ class GlobalAPIClient: APIClient {
                 if let responseDict = response.value as? [String: Any] {
                     if responseDict["message"] as? String == "success" {
                         if let response = PassOverResponse(fromDict: responseDict) {
-                            successBlock(response)
+                            successBlock?(response)
                         } else {
-                            failBlock("Search failed to load. Try again.")
+                            failBlock?("Search failed to load. Try again.")
                         }
                     } else if let reason = responseDict["reason"] as? String {
-                        failBlock(reason)
+                        failBlock?(reason)
                     } else {
-                        failBlock("Search failed for an unknown reason. Please double check your input.")
+                        failBlock?("Search failed for an unknown reason. Please double check your input.")
                     }
                 } else {
-                    failBlock("Search failed to load. Try again.")
+                    failBlock?("Search failed to load. Try again.")
                 }
         }
     }
