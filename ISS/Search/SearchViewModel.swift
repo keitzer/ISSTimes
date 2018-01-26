@@ -7,9 +7,22 @@
 //
 
 import Foundation
+import CoreLocation
 
-class SearchViewModel: ViewModel {
+class SearchViewModel: NSObject, ViewModel, CLLocationManagerDelegate {
     var apiClient: APIClient = GlobalAPIClient.shared
+    var mostRecentLocation: CLLocation?
+    
+    func startGettingLocationUpdates() {
+        let locationManager = CLLocationManager()
+        locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+        }
+    }
     
     func getPassOverTimesFor(latitude incomingLatText: String?, longitude incomingLongText: String?, successBlock: ((PassOverResponse) -> Void)? = nil, failBlock: ((String) -> Void)? = nil) {
         if let latText = incomingLatText,
@@ -21,6 +34,13 @@ class SearchViewModel: ViewModel {
         } else {
             failBlock?("You need to enter numbers for the latitude and longitude.")
         }
-        
+    }
+    
+    // MARK: - Core Loc Delegate
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if locations.count > 0 {
+            mostRecentLocation = locations[0]
+        }
     }
 }

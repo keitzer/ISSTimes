@@ -14,9 +14,14 @@ class MockSearchViewModel: SearchViewModel, Mockable {
     
     struct InvocationKeys {
         static let getPassOverTimesFor = "getPassOverTimesFor"
+        static let startGettingLocationUpdates = "startGettingLocationUpdates"
     }
     
     override func getPassOverTimesFor(latitude incomingLatText: String?, longitude incomingLongText: String?, successBlock: ((PassOverResponse) -> Void)? = nil, failBlock: ((String) -> Void)? = nil) {
         record(invocation: InvocationKeys.getPassOverTimesFor, with: incomingLatText, incomingLongText, successBlock, failBlock)
+    }
+    
+    override func startGettingLocationUpdates() {
+        record(invocation: InvocationKeys.startGettingLocationUpdates)
     }
 }

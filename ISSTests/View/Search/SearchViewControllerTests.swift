@@ -15,40 +15,63 @@ import CoreLocation
 class SearchViewControllerTests: QuickSpec {
     override func spec() {
         var subject: SearchViewController!
+        var mockViewModel: MockSearchViewModel!
         
         beforeEach {
             subject = SearchViewController()
+            mockViewModel = MockSearchViewModel()
             subject.latitudeTextField = UITextField()
             subject.longitudeTextField = UITextField()
+            subject.viewModel = mockViewModel
         }
         
         describe("SearchViewController") {
-            it("has the shared Progress Indicator") {
-                expect(subject.progressIndicator).to(beIdenticalTo(GlobalProgressIndicator.shared))
+            describe("init") {
+                it("has the shared Progress Indicator") {
+                    expect(subject.progressIndicator).to(beIdenticalTo(GlobalProgressIndicator.shared))
+                }
+            }
+            
+            describe("view did load") {
+                it("asks the view model to start getting location updates") {
+                    mockViewModel.reset()
+                    
+                    _ = subject.view
+                    
+                    expect(mockViewModel).to(invoke(MockSearchViewModel.InvocationKeys.startGettingLocationUpdates))
+                }
             }
             
             describe("get location pressed") {
                 it("fills in the text field from the most recent location") {
-                    subject.mostRecentLocation = CLLocation(latitude: 10, longitude: 50)
+                    mockViewModel.mostRecentLocation = CLLocation(latitude: 10, longitude: 50)
                     
                     subject.getMyLocationPressed()
                     
                     expect(subject.latitudeTextField.text).to(equal("10.0"))
                     expect(subject.longitudeTextField.text).to(equal("50.0"))
                 }
+                
+                it("leaves the texts fields as is when nil location") {
+                    subject.latitudeTextField.text = "Pre"
+                    subject.longitudeTextField.text = "Pre"
+                    mockViewModel.mostRecentLocation = nil
+                    
+                    subject.getMyLocationPressed()
+                    
+                    expect(subject.latitudeTextField.text).to(equal("Pre"))
+                    expect(subject.longitudeTextField.text).to(equal("Pre"))
+                }
             }
             
             describe("search") {
                 var mockProgressIndicator: MockProgressIndicator!
-                var mockViewModel: MockSearchViewModel!
                 
                 beforeEach {
                     mockProgressIndicator = MockProgressIndicator()
-                    mockViewModel = MockSearchViewModel()
                     subject.progressIndicator = mockProgressIndicator
                     subject.latitudeTextField.text = "12"
                     subject.longitudeTextField.text = "75"
-                    subject.viewModel = mockViewModel
                 }
                 
                 describe("search pressed") {
@@ -106,30 +129,6 @@ class SearchViewControllerTests: QuickSpec {
                     it("hides the progress indicator") {
                         expect(mockProgressIndicator).to(invoke(MockProgressIndicator.InvocationKeys.dismiss))
                     }
-                }
-            }
-            
-            describe("core location delegate") {
-                it("sets the first location returned to the most recent location") {
-                    let fakeManager = CLLocationManager()
-                    let loc1 = CLLocation(latitude: 10, longitude: 20)
-                    let loc2 = CLLocation(latitude: 30, longitude: 30)
-                    let locations = [loc1, loc2]
-                    
-                    subject.locationManager(fakeManager, didUpdateLocations: locations)
-                    
-                    expect(subject.mostRecentLocation).to(equal(loc1))
-                }
-                
-                it("doesn't crash or change the most recent location when there are no location updates") {
-                    let fakeManager = CLLocationManager()
-                    let locations = [CLLocation]()
-                    let expectedLoc = CLLocation(latitude: 50, longitude: 50)
-                    subject.mostRecentLocation = expectedLoc
-                    
-                    subject.locationManager(fakeManager, didUpdateLocations: locations)
-                    
-                    expect(subject.mostRecentLocation).to(equal(expectedLoc))
                 }
             }
         }

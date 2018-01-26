@@ -9,6 +9,7 @@
 import Foundation
 import Quick
 import Nimble
+import CoreLocation
 @testable import ISS
 
 class SearchViewModelTests: QuickSpec {
@@ -49,6 +50,30 @@ class SearchViewModelTests: QuickSpec {
                     })
                     
                     expect(message).toEventually(equal("You need to enter numbers for the latitude and longitude."))
+                }
+            }
+            
+            describe("core location delegate") {
+                it("sets the first location returned to the most recent location") {
+                    let fakeManager = CLLocationManager()
+                    let loc1 = CLLocation(latitude: 10, longitude: 20)
+                    let loc2 = CLLocation(latitude: 30, longitude: 30)
+                    let locations = [loc1, loc2]
+                    
+                    subject.locationManager(fakeManager, didUpdateLocations: locations)
+                    
+                    expect(subject.mostRecentLocation).to(equal(loc1))
+                }
+                
+                it("doesn't crash or change the most recent location when there are no location updates") {
+                    let fakeManager = CLLocationManager()
+                    let locations = [CLLocation]()
+                    let expectedLoc = CLLocation(latitude: 50, longitude: 50)
+                    subject.mostRecentLocation = expectedLoc
+                    
+                    subject.locationManager(fakeManager, didUpdateLocations: locations)
+                    
+                    expect(subject.mostRecentLocation).to(equal(expectedLoc))
                 }
             }
         }
