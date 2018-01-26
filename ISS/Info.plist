@@ -33,6 +33,8 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>To get your GPS Coordinates</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>To get your GPS Coordinates</string>
 	<key>UILaunchStoryboardName</key>

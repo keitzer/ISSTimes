@@ -23,6 +23,20 @@ class SearchViewModelTests: QuickSpec {
                 expect(subject.apiClient).to(beIdenticalTo(GlobalAPIClient.shared))
             }
             
+            describe("starting to update locations") {
+                it("does all the necessary stuff") {
+                    let mockManager = MockCoreLocationManager()
+                    subject.locationManager = mockManager
+                    
+                    subject.startGettingLocationUpdates()
+                    
+                    expect(mockManager).to(invoke(MockCoreLocationManager.InvocationKeys.requestWhenInUseAuthorization))
+                    expect(mockManager).to(invoke(MockCoreLocationManager.InvocationKeys.startUpdatingLocation))
+                    expect(mockManager.delegate).to(beIdenticalTo(subject))
+                    expect(mockManager.desiredAccuracy).to(equal(kCLLocationAccuracyBest))
+                }
+            }
+            
             describe("search") {
                 var mockClient: MockAPIClient!
                 

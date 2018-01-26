@@ -12,9 +12,9 @@ import CoreLocation
 class SearchViewModel: NSObject, ViewModel, CLLocationManagerDelegate {
     var apiClient: APIClient = GlobalAPIClient.shared
     var mostRecentLocation: CLLocation?
+    var locationManager = CLLocationManager()
     
     func startGettingLocationUpdates() {
-        let locationManager = CLLocationManager()
         locationManager.requestWhenInUseAuthorization()
         
         if CLLocationManager.locationServicesEnabled() {

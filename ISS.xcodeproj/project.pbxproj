@@ -46,6 +46,7 @@
 		FE6CB460201ADD43003A6790 /* IntExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB45F201ADD43003A6790 /* IntExtensionTests.swift */; };
 		FE6CB462201ADEAD003A6790 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6CB461201ADEAD003A6790 /* MapKit.framework */; };
 		FE6CB464201ADEB2003A6790 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6CB463201ADEB2003A6790 /* CoreLocation.framework */; };
+		FE6CB466201AE74D003A6790 /* MockCoreLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB465201AE74D003A6790 /* MockCoreLocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		FE6CB45F201ADD43003A6790 /* IntExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtensionTests.swift; sourceTree = "<group>"; };
 		FE6CB461201ADEAD003A6790 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FE6CB463201ADEB2003A6790 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FE6CB465201AE74D003A6790 /* MockCoreLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoreLocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,6 +296,7 @@
 				FE6CB44F201AD274003A6790 /* MockUINavigationController.swift */,
 				FE6CB454201AD6D9003A6790 /* MockUITableView.swift */,
 				FE6CB45C201ADC01003A6790 /* MockResultsViewModel.swift */,
+				FE6CB465201AE74D003A6790 /* MockCoreLocationManager.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -587,6 +590,7 @@
 				FE6CB428201AB542003A6790 /* PassOverResponseTests.swift in Sources */,
 				FE6CB417201AA946003A6790 /* MockMatchers.swift in Sources */,
 				FE6CB44D201ACEF7003A6790 /* MockSearchViewModel.swift in Sources */,
+				FE6CB466201AE74D003A6790 /* MockCoreLocationManager.swift in Sources */,
 				FE6CB436201AC23F003A6790 /* APIClientTests.swift in Sources */,
 				FE6CB424201AAC62003A6790 /* PassOverTests.swift in Sources */,
 				FE6CB45B201ADB79003A6790 /* ResultsViewModelTests.swift in Sources */,
